@@ -1,0 +1,169 @@
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green-bright: #64ffda;
+    --green-tint: rgba(100,255,218,0.1);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--light-navy);
+    color: var(--white);
+}
+
+i {
+    font-size: 22px;
+}
+
+/**************************** Resume Page ***************************/
+
+/********** NAV BAR ***********/
+
+nav {
+    /* position: fixed; */
+    width: 100%;
+    height: 8%;
+    background-color: var(--navy);
+    color: var(--green-bright);
+    position: fixed;
+}
+
+.return-nav {
+    display: flex;
+    align-items: flex-start;
+}
+
+.return-nav > * {
+    width: calc(100% / 3);
+}
+
+.return-nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.return-nav li {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.return-nav li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.return-nav li a.active {
+    color: var(--light-slate)
+}
+
+.return-nav li a:hover {
+    color: var(--white);
+}
+
+
+#nav-title {
+    text-align: center;
+    margin: auto;
+}
+
+#socials-title {
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/******************************/
+
+
+
+
+
+/******** MAIN ****************/
+
+.main {
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page-title {
+    display: flex; /* Add this */
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    margin-top: 80px;
+    width: 100%;
+    height: 20%;
+}
+
+.page-title h1 {
+    font-size: 45px;
+}
+
+/******* Download Button *******/
+
+.download-sec {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-sec button {
+    border: none;
+    padding: 8px 30px 8px 30px;
+             /* top     right      bottom  left */
+    border-radius: 20px;
+    background-color: var(--dark-navy);
+    color: var(--white);
+}
+
+.download-sec button:hover {
+    background-color: var(--slate);
+}
+
+/******************************/
+
+.resume-box {
+    display: flex;
+    width: 75%;
+    height: 150%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.resume-box iframe {
+    width: 100%;
+    height: 100%;
+    background-color: var(--lightest-slate);
+}
+
+/********** Footer **********/
+
+.bottom {
+    padding-top: 25px;
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+}

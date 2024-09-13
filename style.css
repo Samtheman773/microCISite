@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 2em;
+}
+
+body {
+    font: "NTR",sans-serif;
+}
+
+/*
+
+Fade animation: *************************************************
+
+*/
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+/*********************************************************/
+
+
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green-bright: #64ffda;
+    --green-tint: rgba(100,255,218,0.1);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+    width: 100%;
+    height: 100vh;
+}
+
+section#home {
+    background: no-repeat center center/cover;;
+}
+
+section#about {
+    background: no-repeat center center/cover;;
+}
+
+section#experience {
+    background: no-repeat center center/cover;;
+}
+
+section#portfolio {
+    background: no-repeat center center/cover;;
+}
+
+.container {
+    width: 100%;
+}
+
+.nav-container-main {
+    background-color: #112240;
+    width: 100%;
+}
+
+.white-personal {
+    color: var(--lightest-navy);
+}
+
+.grey-personal {
+    color: var(--slate);
+}
+
+.name {
+    color: var(--green-bright);
+}
+
+.heading-container {
+    padding-bottom: 18em;
+    overflow: auto;
+}
+
+.heading-container p {
+    margin-right: 50%;
+}
+
+.contact-me {
+    font-size: 20px;
+    border: solid;
+    border-width: 3px;
+    border-color: var(--green-bright);
+    padding: .5em;
+    text-decoration: none;
+    color: var(--green-bright)
+}
+
+.contact-me:hover {
+    background-color: var(--lightest-navy);
+}
+
+.head-move {
+    padding-top: 18em;
+}
+
+.head-move p {
+    color: var(--slate);
+    padding-bottom: 1.5em;
+    padding-top: .8em;
+    font-size: 15px;
+}
+
+.head-move h3 {
+    color: var(--slate);
+    font-size: 35px;
+}
+
+.typing-container {
+    display: inline-block;
+}
+
+.typing {
+    font-size: 3.5em;
+    border-right: 5px solid;
+    border-color: var(--green-bright);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing-animation 2s steps(15),
+        cursor 2s linear infinite alternate;
+}
+
+@keyframes cursor  {
+    50% { border-color: transparent }
+}
+
+@keyframes typing-animation {
+    from { width: 0; }
+}
+
+.nav-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding-bottom: 8em;
+}
+
+.sidebar-links {
+    list-style-type: none;
+    text-align: right;
+    padding-right: 3.5em;
+}
+
+.sidebar-links a {
+    text-decoration: none;
+    color: var(--green-bright);
+}
+
+.sidebar-links a:hover {
+    color: var(--lightest-slate)
+}
+
+.social-links {
+    padding-top: 2em;
+    padding-left: 3.5em;
+}
+
+.social-mobile {
+    display: none;
+}
+
+.about-container {
+    height: 100%; /*This results that the container takes up the whole section of the page*/
+    width: 100%;
+    max-width: 100%; /*This controlled the amount of width for the webpage (bug)*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.about-column-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.about-column-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    float: center;
+    box-sizing: border-box;
+}
+
+.about-column h1 {
+    margin: 0;
+    padding-right: 20px;
+    /* float: left; */
+}
+
+.about-left {
+    padding-left: 7em;
+    text-align: left;
+    padding-right: 8em;
+    padding-top: 8em;
+}
+
+/*This might not be working*/
+.rounded {
+    border-radius: 50%;
+}
+
+img {
+    /* display: block; */
+    width: 80%;
+    margin-bottom: 20px;
+    padding-top: 11em;
+}
+
+.headshot-mobile {
+    display: none;
+}
+
+.section-title {
+    color: var(--lightest-slate);
+    font-size: 46px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.section-header {
+    display: flex;
+    padding-bottom: 42px;
+    width: 100vw;
+}
+
+.section-header:after {
+    content: "";
+    display: block;
+    width: 300px;
+    margin-top: 39px;
+    height: 1px;
+    margin-left: 20px;
+    background-color: var(--lightest-navy);
+}              
+
+.make-green {
+    color: var(--green-bright);
+}
+
+.about-left p {
+    color: #6c757d;
+}
+
+.list-about {
+    padding-bottom: 1em;
+}
+
+.aligned-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aligned-list i {
+    color: var(--green-bright);
+}
+
+.inline {
+    display: inline-block;
+    margin: 0px;
+}
+
+
+@media (max-width: 768px) {
+    /*Removes the navigation bar from the mobile screen*/
+    .nav-container-main {
+        display: none;
+    }
+
+    section#home {
+        width: 100%;
+    }
+
+    .head-move {
+        width: 100%;
+        text-align: center;
+    }
+
+    .typing-container {
+        display: inline-block;
+        text-align: center;
+        font-size: .80em;
+    }
+
+    .typing-container h1 {
+        display: inline-block;
+    }
+    
+    .typing {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        animation: typing-animation 2s steps(15),
+        cursor 2s linear infinite alternate;
+    }
+
+    .typing-container:after {
+        content: none;
+    }
+
+    .head-move h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 1.75em;
+    }
+
+    .head-move p {
+        width: 100%;
+        text-align: center;
+        font-size: 1.12em;
+    }
+
+    .head-move a {
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+        border-width: .15em;
+        border-radius: 2%;
+    }
+
+    .menu-button {
+        text-align: center;
+    }
+
+    /* Where i left off */
+
+    /* .social-mobile {
+        width: 100%;
+        text-align: center;
+    } */
+
+    /********************************************************** About Section **************************/
+
+    section#about {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-column-1 {
+        display: initial;
+        width: 100%;
+        padding: initial;
+    }
+
+
+    .about-left {
+        padding: initial;
+        text-align: left;
+        padding-right: initial;
+        padding-top: initial;
+    }
+
+    .list-about {
+        text-align: center;
+    }
+
+    .section-header {
+        content: initial;
+        display: initial;
+    }
+
+    .section-header:after {
+        content: none;
+    }
+
+    .section-title {
+        width: 100%;
+        float: left;
+        text-align: left;
+        font-size: 1.8em;
+        padding-left: .3em;
+        padding-bottom: 1em;
+    }
+
+    .about-left p {
+        text-align: left;
+        padding-left: .5em;
+        font-size: 1.12em;
+    }
+
+    .image-container {
+        display: flex; /* This tells the browser that the div is the parent container and the image is a flex item*/
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-column-2 {
+        display: block;
+    }
+
+    .headshot-mobile {
+        display: initial;
+        width: 100%;
+    }
+
+    img {
+        width: 70%;
+        margin: -5em auto 0;
+    }
+}
